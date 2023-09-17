@@ -17,8 +17,18 @@
 		</header>
 		<main>
 			<form class="translator">
-				<input id="inputText" class="translator__input"></input>
-				<div id="outputText" class="translator__output"><p>Translation</p></div>
+				<section class="translator__wrapper">
+					<textarea
+						id="inputText"
+						name="inputText"
+						class="translator__input"
+						placeholder="Write English or morse code here. Morse code should be written with a space between characters and either two or more spaces or a / between words. E.g. ... --- ...   ... --- ... or ... --- ... / ... --- ..."
+					></textarea>
+					<div id="outputText" class="translator__output">
+						<p>Translation</p>
+					</div>
+				</section>
+				<button id="translateButton">Translate!</button>
 			</form>
 		</main>
 	</body>
