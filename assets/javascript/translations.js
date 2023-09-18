@@ -1,4 +1,4 @@
-// A to Z and 0-9 in Morse Code
+// A to Z and 0-9 to Morse Code
 export const toMorse = {
 	A: ".-",
 	B: "-...",
@@ -36,9 +36,26 @@ export const toMorse = {
 	8: "---..",
 	9: "----.",
 	0: "-----",
+	"!": "-.-.--",
+	".": ".-.-.-",
+	",": "--..--",
+	"?": "..--..",
+	";": "-.-.-.",
+	":": "---...",
+	"-": "-....-",
+	"/": "-..-.",
+	"'": ".----.",
+	'""': ".-..-.",
+	"''": ".-..-.",
+	"+": ".-.-.",
+	"-": "-....-",
+	"/": "---...",
+	"=": "-...-",
+	")": "-.--.-",
+	"(": "-.--.",
 };
 
-// A to Z and 0-9 to Morse Code
+// A to Z and 0-9 from Morse Code
 export const fromMorse = {
 	".-": "a",
 	"-...": "b",
@@ -76,6 +93,23 @@ export const fromMorse = {
 	"---..": "8",
 	"----.": "9",
 	"-----": "0",
+	"-.-.--": "!",
+	".-.-.-": ".",
+	"--..--": ",",
+	"..--..": "?",
+	"-.-.-.": ";",
+	"---...": ":",
+	"-....-": "-",
+	".----.": "'",
+	".-..-.": '""',
+	".-..-.": "''",
+	".-.-.": "+",
+	"-....-": "-",
+	"-..-": "*",
+	"---...": "/",
+	"-...-": "=",
+	"-.--.-": ")",
+	"-.--.": "(",
 };
 
 export const encodeMorse = (string) => {
@@ -86,9 +120,10 @@ export const encodeMorse = (string) => {
 			if (parseInt(char)) {
 				parseInt(char);
 			}
-			return toMorse[char] ? `${toMorse[char]} ` : `${char} `;
+			return toMorse[char] ? `${toMorse[char]} ` : `${char}`;
 		})
-		.join("");
+		.join("")
+		.replace(/[ /]{2,}/g, " / ");
 };
 
 export const decodeMorse = (morseCode) => {
@@ -98,7 +133,7 @@ export const decodeMorse = (morseCode) => {
 			word
 				.split(" ")
 				.map((char) => {
-					return fromMorse[char] ? fromMorse[char] : char;
+					return fromMorse[char] ? fromMorse[char] : `${char}`;
 				})
 				.join("")
 		)
