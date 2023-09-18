@@ -1,4 +1,4 @@
-export const replaceChildrenElementsWithText = (elementType, text, parent) => {
+export const replaceText = (elementType, text, parent) => {
 	const newElement = document.createElement(elementType);
 	const textNode = document.createTextNode(text);
 	newElement.appendChild(textNode);
