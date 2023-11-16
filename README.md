@@ -2,7 +2,7 @@
 
 ## Overview
 
-The morse code translator tranlates English text (A-Z, numbers and some
+The morse code translator translates English text (A-Z, numbers and some
 punctuation) into morse code and vice versa. I created it using JavaScript and
 SCSS, and I used Jest to create unit tests for my translation functions.
 
