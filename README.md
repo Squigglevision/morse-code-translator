@@ -9,7 +9,6 @@ SCSS, and I used Jest to create unit tests for my translation functions.
 ## Demo & Snippets
 
 ![Screenshot of the morse code translator app](./assets/images/morse-code-translator-screenshot.png)
-A screenshot of the translator in action.
 
 ---
 
