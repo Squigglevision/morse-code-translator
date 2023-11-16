@@ -1,4 +1,4 @@
-# morse-code-translator
+# Morse Code Translator
 
 ## Overview
 
@@ -6,25 +6,40 @@ The morse code translator tranlates English text (A-Z, numbers and some
 punctuation) into morse code and vice versa. I created it using JavaScript and
 SCSS, and I used Jest to create unit tests for my translation functions.
 
-## The app
+## Demo & Snippets
 
 ![Screenshot of the morse code translator app](./assets/images/morse-code-translator-screenshot.png)
+A screenshot of the translator in action.
 
-The design is quite simple, as I focused more on refactoring the JavaScript
-and testing for edge cases, but it's optimised to any screen size.
+---
 
-## Functionality
+## Requirements / Purpose
 
-The scripts for the project contain both encode and decode functions, which
-are called depending on which language is detected. The translator will check
-for dots and dashes - and no A-Z characters - to determine if the input is
-written in morse code. If it detects English, numbers or other punctuation aside
-from dot, dash or forward slash, it will call the encode function instead.
+The MVP for this project was to create an interface that allows the user to input either English or Morse Code, and have functions in JavaScript that take that user input and translate it. For the project's bonus challenge, I set it up so that on clicking "translate" will auto-detect whether the user has written English or Morse Code, and will use the right translation function.
 
-If either function can't convert a character, it will simply display that
-character instead and not translate it.
+One of the main purposes of the project was to practice writing tests for the translating functions, which I have done so using Jest. The project also tested my knowledge of DOM manipulation and I used this project to practice creating reusable DOM utils so that I could reduce the amount of repetition in the code.
 
-To capture the input, I've used a form with a textarea field, which will then be
-translated and be shown in the output div. To show the encoded or decoded text,
-I created a function to replace the output text and change the paramaters based
-on whether it needs to be encoded or decoded.
+---
+
+## Design Goals / Approach
+
+For this project, I kept the design of the interface quite simple and focused more on refactoring code and testing for edge cases. My goal was to design my code in such a way that I minimise repetition as much as possible, and create reusable functions/DOM utils to reduce the amount of code needed to write inside of event listeners.
+
+---
+
+## Features
+
+The Morse Code Translator has the following features:
+
+-   An input field where the user can write either English or Morse Code, and have the language auto-detected
+-   Encode and decode functions, that allow for English to be translated into Morse Code and vice versa
+-   Tests written in Jest that check that both the encode and decode functions are performing as expected
+
+---
+
+## Future Goals
+
+Given more time, I'd love to:
+
+-   Design a nicer user interface
+-   Set up a function that reverses the encodeMorse function, rather than having two separate objects for both encoding and decoding
