@@ -20,6 +20,13 @@ One of the main purposes of the project was to practice writing tests for the tr
 
 ---
 
+## Build Steps
+
+To run this application correctly on your local machine when using VS Code, you must use the Live Server extension. 
+The JS functions will not run if you open the index.html file.
+
+---
+
 ## Design Goals / Approach
 
 For this project, I kept the design of the interface quite simple and focused more on refactoring code and testing for edge cases. My goal was to design my code in such a way that I minimise repetition as much as possible, and create reusable functions/DOM utils to reduce the amount of code needed to write inside of event listeners.
