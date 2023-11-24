@@ -10,7 +10,7 @@ SCSS, and I used Jest to create unit tests for my translation functions.
 
 ![Screenshot of the morse code translator app](./assets/images/morse-code-translator-screenshot.png)
 
-[Click here]([https://squigglevision.github.io/FakeOS/](https://squigglevision.github.io/morse-code-translator/) to see a live version of the website.
+[Click here]((https://squigglevision.github.io/morse-code-translator/) to see a live version of the website.
 
 ---
 
